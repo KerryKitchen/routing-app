@@ -4,7 +4,7 @@ const WeatherApp = () => {
   return (
     <div>
       <h1>Weather App</h1>
-      <Link to="/">Home</Link>
+      <Link to="/routing-app/">Home</Link>
     </div>
   );
 };

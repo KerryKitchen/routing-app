@@ -10,10 +10,10 @@ export default function App() {
   return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/routing-app" element={<Layout />}>
             <Route index element={<Home />}/>
-            <Route path="weather-app" element={<WeatherApp />}/>
-            <Route path="*" element={<NoPage />}/>
+            <Route path="/routing-app/weather-app" element={<WeatherApp />}/>
+            <Route path="/routing-app/*" element={<NoPage />}/>
           </Route>
         </Routes>
       </BrowserRouter>
