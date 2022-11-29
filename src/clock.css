@@ -1,0 +1,177 @@
+:root {
+	--clock-size: 192px;
+	--hand-width: 12px;
+	--fg-color-active: ivory;
+	--fg-color-dormant: grey;
+}
+
+
+/* App styles */
+#clock {
+	width: var(--clock-size);
+	height: var(--clock-size);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: -10%;
+}
+
+#i-o {
+	min-width: var(--clock-size);
+	min-height: var(--clock-size);
+	display: flex;
+	justify-content: center;
+	animation: tick-tock-anim 12s infinite;
+}
+
+#i-o div {
+	width: var(--hand-width);
+	height: calc(var(--clock-size) / 2);
+	display: flex;
+	justify-content: center;
+	transform-origin: bottom center;
+}
+
+#i-o div:not(:first-child) {
+	margin-left: calc(var(--hand-width) * -1);
+}
+
+#t, #ck {
+	color: var(--fg-color-active);
+}
+
+#ck {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: calc(var(--clock-size) * -0.8);
+}
+
+/* CLOCK Keyframes */
+@keyframes tick-tock-anim {
+	0.0%  { rotate: 0deg; }
+	8.3%  { rotate: 30deg; }
+	16.6% { rotate: 60deg; }
+	24.9% { rotate: 90deg; }
+	33.2% { rotate: 120deg; }
+	41.5% { rotate: 150deg; }
+	49.8% { rotate: 180deg; }
+	58.1% { rotate: 210deg; }
+	66.4% { rotate: 240deg; }
+	74.7% { rotate: 270deg; }
+	83.0% { rotate: 300deg; }
+	91.3% { rotate: 330deg; }
+	100.0%  { rotate: 360deg; }
+}
+
+/* HAND Transform and animation links */
+#hand-0 {
+	animation: fade-0 12s infinite;
+}
+#hand-1 {
+	transform: rotate(30deg);
+	animation: fade-1 12s infinite;
+}
+#hand-2 {
+	transform: rotate(60deg);
+	animation: fade-2 12s infinite;
+}
+#hand-3 {
+	transform: rotate(90deg);
+	animation: fade-3 12s infinite;
+}
+#hand-4 {
+	transform: rotate(120deg);
+	animation: fade-4 12s infinite;
+}
+#hand-5 {
+	transform: rotate(150deg);
+	animation: fade-5 12s infinite;
+}
+#hand-6 {
+	transform: rotate(180deg);
+	animation: fade-6 12s infinite;
+}
+#hand-7 {
+	transform: rotate(210deg);
+	animation: fade-7 12s infinite;
+}
+#hand-8 {
+	transform: rotate(240deg);
+	animation: fade-8 12s infinite;
+}
+#hand-9 {
+	transform: rotate(270deg);
+	animation: fade-9 12s infinite;
+}
+#hand-10 {
+	transform: rotate(300deg);
+	animation: fade-10 12s infinite;
+}
+#hand-11 {
+	transform: rotate(330deg);
+	animation: fade-11 12s infinite;
+}
+
+/* HAND Keyframes */
+@keyframes fade-0 {
+	0.0%  { color: var(--fg-color-active); }
+	8.3%  { color: var(--fg-color-dormant); }
+	91.3% { color: var(--fg-color-dormant); }
+	100.0%  { color: var(--fg-color-active); }
+}
+@keyframes fade-1 {
+	83.0% { color: var(--fg-color-dormant); }
+	91.3% { color: var(--fg-color-active); }
+	100.0%  { color: var(--fg-color-dormant); }
+}
+@keyframes fade-2 {
+	74.7% { color: var(--fg-color-dormant); }
+	83.0% { color: var(--fg-color-active); }
+	91.3% { color: var(--fg-color-dormant); }
+}
+@keyframes fade-3 {
+	66.4% { color: var(--fg-color-dormant); }
+	74.7% { color: var(--fg-color-active); }
+	83.0% { color: var(--fg-color-dormant); }
+}
+@keyframes fade-4 {
+	58.1% { color: var(--fg-color-dormant); }
+	66.4% { color: var(--fg-color-active); }
+	74.7% { color: var(--fg-color-dormant); }
+}
+@keyframes fade-5 {
+	49.8% { color: var(--fg-color-dormant); }
+	58.1% { color: var(--fg-color-active); }
+	66.4% { color: var(--fg-color-dormant); }
+}
+@keyframes fade-6 {
+	41.5% { color: var(--fg-color-dormant); }
+	49.8% { color: var(--fg-color-active); }
+	58.1% { color: var(--fg-color-dormant); }
+}
+@keyframes fade-7 {
+	33.2% { color: var(--fg-color-dormant); }
+	41.5% { color: var(--fg-color-active); }
+	49.8% { color: var(--fg-color-dormant); }
+}
+@keyframes fade-8 {
+	24.9% { color: var(--fg-color-dormant); }
+	33.2% { color: var(--fg-color-active); }
+	41.5% { color: var(--fg-color-dormant); }
+}
+@keyframes fade-9 {
+	16.6% { color: var(--fg-color-dormant); }
+	24.9% { color: var(--fg-color-active); }
+	33.2% { color: var(--fg-color-dormant); }
+}
+@keyframes fade-10 {
+	8.3%  { color: var(--fg-color-dormant); }
+	16.6% { color: var(--fg-color-active); }
+	24.9% { color: var(--fg-color-dormant); }
+}
+@keyframes fade-11 {
+	0.0%  { color: var(--fg-color-dormant); }
+	8.3%  { color: var(--fg-color-active); }
+	16.6% { color: var(--fg-color-dormant); }
+}

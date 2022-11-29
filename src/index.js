@@ -5,6 +5,7 @@ import Layout from "./pages/layout";
 import Home from "./pages/home";
 import WeatherApp from "./pages/weather-app";
 import NoPage from "./pages/nopage";
+import "./style.css";
 
 export default function App() {
   return (

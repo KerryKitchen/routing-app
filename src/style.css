@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--fg-color: #FFFFFF;
+	--bg-color: #586C77;
+}
+
+html {}
+
+nav {}
+
+body {
+	min-height: 100vh;
+	color: var(--fg-color);
+	background-color: var(--bg-color);
+}
+
+.clock-wrapper {
+	border: 1px solid red;
+	min-width: 250px;
+	text-transform: uppercase;
+	font-size: 1.25rem;
+}
+
+.text-wrapper a {
+	text-decoration: underline;
+}
